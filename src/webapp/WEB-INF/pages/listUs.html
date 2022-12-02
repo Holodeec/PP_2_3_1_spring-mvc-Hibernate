@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Users</title>
+</head>
+<body>
+
+<div th:each="pps : ${user}">
+  <a th:href="@{/{id}(id=${pps.getId()})}" th:text="${pps.getName()}">user</a>
+</div>
+<br/>
+<br/>
+<a th:href="@{/new}">New User</a>
+
+</body>
+</html>
